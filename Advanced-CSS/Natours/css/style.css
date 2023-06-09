@@ -7,7 +7,7 @@
 
 html {
   font-size: 62.5%;
-  /*Default Font Size is 16px*/ }
+  /*This define what 1 rem should be. Default Font Size is 16px*/ }
 
 body {
   box-sizing: border-box; }
@@ -127,3 +127,33 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row [class^="class"] {
+    background-color: orangered;
+    float: left;
+    color: #fff;
+    height: 4rem; }
+    .row [class^="class"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .class1of2 {
+    width: calc((100% - 6rem)/2); }
+  .row .class1of3 {
+    width: calc((100% - 2*6rem)/3); }
+  .row .class2of3 {
+    width: calc(2*((100% - 2*6rem)/3) + 6rem); }
+  .row .class1of4 {
+    width: calc((100% - 3*6rem)/4); }
+  .row .class2of4 {
+    width: calc(2*((100% - 3*6rem)/4) + 6rem); }
+  .row .class3of4 {
+    width: calc(3*((100% - 3*6rem)/4) + 2 * (6rem)); }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table; }
