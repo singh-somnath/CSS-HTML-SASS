@@ -1,0 +1,103 @@
+.form{
+
+    &_group{
+
+        &:not(:last-child)
+        {
+            margin-bottom: 2rem;
+        }       
+   
+        &_input{
+            padding: 1.5rem 2rem;
+            font-family: inherit;
+            color: inherit;    
+            font-size: 1.5rem;            
+            border: none;
+            display:block;
+            border-radius: 3px;
+            border-bottom: 3px solid transparent;
+            width:90%;
+            background-color: rgba($color-white, 0.5);
+            transition: all .3s;
+
+            &:focus{
+                outline: none;
+                border-bottom: 3px solid $color-primary;
+                box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+                &:invalid{
+                    border-bottom: 3px solid $color-secondary-dark;
+                }
+            }
+
+            &::-webkit-input-placeholder{
+                color:$color-gray-dark-2;
+            } 
+        }
+
+        &_label{
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-left: 2rem;
+            display: block;
+            margin-top: 0.7rem;   
+            transition: all .3s; 
+        }
+
+        &_input:placeholder-shown + &_label{
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4rem);
+        }
+
+        &_radio{
+            width:49%;
+            display: inline-block;
+
+            &_input{
+                display: none;
+                &:checked + .form_group_radio_label .form_group_radio_label_button{                    
+                    &::after{
+                        content:"";
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+
+            &_label{
+                font-size: 1.5rem;
+                font-weight: 700;
+                padding-left: 4rem;
+                position: relative;
+
+                & &_button{
+                    display: inline-block;
+                    width: 3rem;
+                    height: 3rem;
+                    border: 7px solid $color-primary;
+                    border-radius: 50%;
+                    position: absolute;
+                    top:-0.65rem;
+                    left:0;
+
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        background-color: $color-primary;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+}
