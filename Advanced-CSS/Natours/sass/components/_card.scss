@@ -1,10 +1,10 @@
 .card{
      perspective: 150rem;
     -moz-perspective: 150rem;
-    position:relative;
-    height:50rem;
+     position:relative;
+     height:50rem;
 
-    &_side{     
+     &_side{         
         height: 50rem;
         transition: all 1.5s ease;
         position: absolute;
@@ -126,4 +126,56 @@
         }
 
     }
+
+    /******************************************************************************/
+    @include respond(tab-port)
+    {
+        
+         height:auto;
+         box-shadow: 1rem 1rem 2rem rgba($color-black,0.2);
+         border-radius: 3px;
+         background-color: $color-white;
+    
+         &_side{
+            height:auto;
+            position:relative;          
+            box-shadow:none;
+            border-radius: 0;
+                    
+            &-back{          
+                transform: rotateY(0);   
+                clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%); 
+            }      
+        
+        }
+    
+        &:hover &_side-front{
+            transform: rotateY(0);
+        }       
+    
+        
+        &_cta{
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+            text-align: center;
+            width: 100%;
+            padding:6rem 0 3rem 0;
+        }   
+        
+        &_price_box{
+           
+            &-price{
+              
+                margin-bottom:4rem;
+            }
+    
+        }
+
+
+    }
+    /******************************************************************************/
+
+
 }
