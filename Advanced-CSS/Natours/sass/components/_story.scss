@@ -5,7 +5,12 @@
     padding: 6rem;
     padding-left: 9rem;
     font-size: $default-font-size;
+
+   
     transform: skew(-12deg);
+    @include respond(tab-land){
+        transform: skew(0);
+    }
     position: relative;
 
     &_shape{
@@ -17,7 +22,9 @@
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skew(12deg);      
-       
+        @include respond(tab-land){
+            transform: translateX(-3rem) skew(0);    
+        }
 
 
     }
@@ -28,6 +35,9 @@
     }    
     &_text{
         transform: skew(12deg);
+        @include respond(tab-land){
+            transform: skew(0);    
+        }
        
     }
     &_caption{
