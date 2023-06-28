@@ -1,0 +1,124 @@
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:1.2rem;
+
+    &_logo{
+        height:3.5rem;
+        margin-left: 2.5rem;    
+    }
+    &_search_box{
+        flex:0 0 40%;
+        display: flex;
+        align-items: center;
+
+        &_input{    
+            border:none;
+            width:90%;
+            border-radius: 100px;
+            font-size: 400;
+            background-color: var(--color-grey-light-4) ;
+            padding:.7rem 2rem;
+            margin-right:-3.5rem;
+            transition: all .2s;
+
+            &:focus{
+                outline:none;
+                width:100%;
+            }
+            &::-webkit-input-placeholder{
+                font-size: 1.2rem;
+                color:var(--color-grey-dark-3);
+            }
+
+        }
+
+        &_button{
+            border:none;
+            background-color: var(--color-grey-light-4) ;
+            cursor: pointer;
+            transition: all .2s;
+            height:1.75rem;
+            width:1.75rem;
+
+            &_icon{
+
+                height:1.5rem;
+                width:1.5rem;
+                fill:var(--color-grey-dark-2);
+
+            }
+
+            &:active{
+                transform: translateY(1px );
+            }
+        }
+
+    }
+
+    &_user_nav{
+        align-self: stretch;
+        display: flex;
+        align-items: center; 
+        
+
+        & > *{
+           padding: 0 1rem;
+           cursor: pointer;
+           height: 100%;
+
+           &:hover{
+             background-color: var(--color-grey-light-4);
+           }
+        }
+
+      
+
+        &_box{
+           
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            &_icon{
+                height:2.25rem;
+                width: 2.25rem;
+                fill:var(--color-grey-dark-1);
+            }
+            &_quantity{
+                background-color: var(--color-primary);    
+                font-size: 0.8rem;          
+                height: 1.75rem;
+                width: 1.75rem;
+                border-radius: 50%;
+                color:var(--color-grey-light-1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top:1.8rem;
+                right:0.2rem;
+                
+            }
+        }
+        &_user{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            &_image{
+                height: 4rem;
+                width: 4rem;
+                border-radius: 100px;
+            }
+
+            &_title{
+                margin-left: 1rem;
+                 font-size: 1.2rem;        
+            }
+        }
+
+    }
+}
