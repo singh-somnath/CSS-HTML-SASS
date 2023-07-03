@@ -34,6 +34,61 @@ body {
   line-height: 1.6rem;
   min-height: 100vh; }
 
+.btn-link {
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  color: var(--color-primary);
+  background-color: transparent;
+  border-bottom: 2px solid currentColor;
+  cursor: pointer; }
+  .btn-link:hover {
+    color: var(--color-grey-dark-1); }
+  .btn-link:focus {
+    outline: none;
+    animation: pulsate 1s Infinite; }
+
+.btn_footer {
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 100px;
+  color: #fff;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  cursor: pointer;
+  position: relative; }
+  .btn_footer_visible {
+    display: inline-block;
+    padding: 2rem 8rem;
+    transition: all .3s; }
+  .btn_footer_invisible {
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    padding: 2rem 0;
+    height: 100%;
+    width: 100%;
+    top: -100%;
+    left: 0;
+    transition: all .3s; }
+  .btn_footer:hover {
+    background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark)); }
+  .btn_footer:hover .btn_footer_invisible {
+    top: 0;
+    visibility: visible; }
+  .btn_footer:hover .btn_footer_visible {
+    transform: translateY(-100%); }
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
+  100% {
+    transform: scale(1); } }
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -169,6 +224,155 @@ body {
     text-align: center;
     margin-bottom: 3rem; }
 
+.hotel-view-gallery {
+  display: flex;
+  border-bottom: 1px solid var(--color-grey-light-4); }
+  .hotel-view-gallery-item-image {
+    width: 100%;
+    display: block; }
+
+.overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid var(--color-grey-light-4); }
+  .overview-hotel-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: va(--color-grey-light-4);
+    text-transform: uppercase;
+    padding: 1.5rem;
+    letter-spacing: .1rem; }
+  .overview-rating {
+    display: flex;
+    align-items: center;
+    margin-right: auto; }
+    .overview-rating-star {
+      height: 1.75rem;
+      width: 1.75rem;
+      fill: var(--color-primary); }
+  .overview-location {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem; }
+    .overview-location-icon {
+      height: 1.75rem;
+      width: 1.75rem;
+      fill: var(--color-primary); }
+  .overview-votes {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: var(--color-grey-light-3);
+    background-color: var(--color-primary); }
+    .overview-votes-average {
+      font-size: 2.5rem; }
+    .overview-votes-count {
+      margin-top: .5rem;
+      font-size: 1.2rem; }
+
+.description {
+  display: flex;
+  padding: 4rem;
+  background-color: var(--color-grey-light-3);
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--color-grey-light-4); }
+  .description_detail {
+    flex: 0 0 60%;
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 3px;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3); }
+    .description_detail .text:not(:last-of-type) {
+      margin-bottom: 3rem; }
+    .description_detail .amenities_list {
+      display: flex;
+      margin: 3rem 0;
+      padding: 3rem 0;
+      list-style: none;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--color-grey-light-4);
+      border-top: 1px solid var(--color-grey-light-4); }
+      .description_detail .amenities_list_item {
+        flex: 0 0 50%; }
+        .description_detail .amenities_list_item::before {
+          content: "";
+          display: inline-block;
+          height: 1rem;
+          width: 1rem;
+          margin-right: 1rem;
+          background-color: var(--color-primary);
+          -webkit-mask-image: url(../../img/chevron-thin-right.svg);
+          -webkit-mask-size: cover;
+          mask-image: url(../../img/chevron-thin-right.svg);
+          mask-size: cover; }
+    .description_detail .recommendations {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 2rem; }
+      .description_detail .recommendations_guests_guest {
+        height: 4rem;
+        width: 4rem;
+        margin-right: -2rem;
+        border-radius: 100px;
+        box-sizing: border-box;
+        border: 3px solid #fff; }
+  .description_user_reviews {
+    margin-left: 4rem;
+    flex: 1; }
+    .description_user_reviews .user_review {
+      display: flex;
+      flex-direction: column;
+      padding: 3rem;
+      border-radius: 3px;
+      box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);
+      background-color: #fff;
+      margin-bottom: 4rem; }
+      .description_user_reviews .user_review_rating {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem; }
+        .description_user_reviews .user_review_rating_image {
+          height: 4rem;
+          width: 4rem;
+          border-radius: 100px; }
+        .description_user_reviews .user_review_rating_detail {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding-left: 1rem;
+          margin-right: auto; }
+          .description_user_reviews .user_review_rating_detail span {
+            display: block; }
+          .description_user_reviews .user_review_rating_detail_title {
+            font-weight: 700; }
+        .description_user_reviews .user_review_rating_number {
+          color: var(--color-primary);
+          font-size: 2.5rem;
+          font-weight: 600; }
+    .description_user_reviews .linkAll {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+
+.home_footer {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  justify-content: center;
+  align-items: center; }
+  .home_footer_news {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 4rem; }
+
 .container {
   max-width: 120rem;
   min-height: 50rem;
@@ -186,5 +390,4 @@ body {
       flex: 1; }
     .container .content .main {
       background-color: #fff;
-      flex: 4;
-      height: 80rem; }
+      flex: 4; }

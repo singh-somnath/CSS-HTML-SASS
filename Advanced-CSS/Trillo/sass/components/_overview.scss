@@ -1,0 +1,60 @@
+.overview{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid var(--color-grey-light-4);
+
+    &-hotel-name{
+        font-size:2rem;
+        font-weight: 700;
+        color:va(--color-grey-light-4);
+        text-transform: uppercase;
+        padding: 1.5rem;
+        letter-spacing: .1rem;
+
+    }
+
+    &-rating{
+        display: flex;
+        align-items: center ;
+        margin-right: auto;
+        &-star{
+            height:1.75rem;
+            width:1.75rem;
+            fill:var(--color-primary);
+        }
+    }
+
+    &-location{
+        display: flex;
+        align-items: center ;
+        margin-right: 2rem;
+        &-icon{
+            height:1.75rem;
+            width:1.75rem;
+            fill:var(--color-primary);
+        }
+    }
+
+    &-votes{
+        align-self: stretch;  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        color:var(--color-grey-light-3);
+        background-color: var(--color-primary);
+
+        &-average{
+            font-size: 2.5rem;          
+        }
+        &-count{
+            margin-top: .5rem;
+            font-size:1.2rem;
+        }
+    }
+
+
+}
