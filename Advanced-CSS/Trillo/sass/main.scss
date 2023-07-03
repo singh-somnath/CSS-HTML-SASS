@@ -1,5 +1,11 @@
 @import "./abstracts/mixins";
 @import "./base/base";
+@import "./components/button";
 @import "./components/header";
 @import "./components/navigation";
+@import "./components/hotel-view";
+@import "./components/overview";
+@import "./components/description";
+@import "./components/home_footer";
+
 @import "./layout/layout";

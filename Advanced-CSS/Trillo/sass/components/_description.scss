@@ -1,0 +1,129 @@
+.description{
+    display: flex;
+    padding: 4rem;
+    background-color: var(--color-grey-light-3);
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--color-grey-light-4);
+
+    &_detail{
+        flex: 0 0 60%;
+        background-color:#fff;
+        padding: 3rem;
+        border-radius: 3px;
+        box-shadow: 0 2rem 3rem rgba(0,0,0,.3);
+        .text{
+
+            &:not(:last-of-type){
+                margin-bottom: 3rem;
+            }
+
+        }
+        .amenities_list{
+            display: flex;
+            margin:3rem 0;
+            padding: 3rem 0;
+            list-style: none;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--color-grey-light-4);
+            border-top: 1px solid var(--color-grey-light-4);
+
+            &_item{
+                flex : 0 0 50%;
+
+                &::before{
+                    content:"";
+                    display: inline-block;
+                    
+                    height: 1rem;
+                    width: 1rem;
+                   
+                    margin-right: 1rem;
+
+                    //background-image: url(../../img/chevron-thin-right.svg);
+                    //background-size: cover ;
+
+                    background-color: var(--color-primary);
+                    -webkit-mask-image: url(../../img/chevron-thin-right.svg);
+                    -webkit-mask-size: cover;
+                    mask-image: url(../../img/chevron-thin-right.svg);
+                    mask-size: cover;
+
+                }
+            }
+        }
+
+        .recommendations{
+            display:flex;
+            justify-content: space-between;
+            margin-right: 2rem;
+          
+            &_guests{
+                &_guest{
+                    height: 4rem;
+                    width: 4rem;
+                    margin-right: -2rem;
+                    border-radius: 100px;
+                    box-sizing: border-box;
+                    border: 3px solid #fff;
+                }
+            }
+        }
+    }
+
+    &_user_reviews{
+        margin-left: 4rem;
+        flex: 1;
+
+        .user_review{
+            display: flex;
+            flex-direction: column;
+            padding: 3rem;
+            border-radius: 3px;
+            box-shadow: 0 2rem 3rem rgba(0,0,0,.3);
+            background-color:#fff;
+            margin-bottom: 4rem;
+
+          
+
+            &_rating{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin-top: 3rem;
+
+                &_image{
+                    height: 4rem;
+                    width: 4rem;                   
+                    border-radius: 100px;
+                }
+                &_detail{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding-left: 1rem;
+                    span{
+                        display: block;
+                    }
+                    &_title{
+                        font-weight: 700;
+                    }
+                    margin-right: auto;
+                }
+                &_number{
+                    color:var(--color-primary);
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                }
+
+            }
+        }
+
+        .linkAll{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+}

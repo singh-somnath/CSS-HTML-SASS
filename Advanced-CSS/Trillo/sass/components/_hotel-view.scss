@@ -1,0 +1,13 @@
+.hotel-view{
+    &-gallery{
+        display:flex;
+        border-bottom: 1px solid var(--color-grey-light-4);
+        &-item{
+                &-image{
+                    width:100%; 
+                    display: block;
+                }
+        }
+    }
+}   
+
