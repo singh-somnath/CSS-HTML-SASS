@@ -5,12 +5,21 @@
     font-size: 1.2rem;
     border-bottom: 1px solid var(--color-grey-light-4);
 
+    @media only screen and (max-width: 62.5em){
+        flex-direction: column;
+        padding:2.5rem;
+    }
+
     &_detail{
         flex: 0 0 60%;
         background-color:#fff;
         padding: 3rem;
         border-radius: 3px;
         box-shadow: 0 2rem 3rem rgba(0,0,0,.3);
+
+        @media only screen and (max-width: 62.5em){
+            margin-bottom: 2.5rem;;
+        }
         .text{
 
             &:not(:last-of-type){
@@ -56,6 +65,11 @@
             display:flex;
             justify-content: space-between;
             margin-right: 2rem;
+
+            &_title{
+                flex:0 0 60%;
+            }
+            
           
             &_guests{
                 &_guest{
@@ -74,6 +88,10 @@
         margin-left: 4rem;
         flex: 1;
 
+        @media only screen and (max-width: 62.5em){
+            margin-left: 0;
+        }
+
         .user_review{
             display: flex;
             flex-direction: column;
@@ -82,48 +100,67 @@
             box-shadow: 0 2rem 3rem rgba(0,0,0,.3);
             background-color:#fff;
             margin-bottom: 4rem;
-
-          
-
-            &_rating{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                margin-top: 3rem;
-
-                &_image{
-                    height: 4rem;
-                    width: 4rem;                   
-                    border-radius: 100px;
-                }
-                &_detail{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    padding-left: 1rem;
-                    span{
-                        display: block;
-                    }
-                    &_title{
-                        font-weight: 700;
-                    }
-                    margin-right: auto;
-                }
-                &_number{
-                    color:var(--color-primary);
-                    font-size: 2.5rem;
-                    font-weight: 600;
-                }
-
+            position: relative;
+            z-index:100;
+            @media only screen and (max-width: 62.5em){
+                margin-bottom: 2.5rem;
             }
-        }
 
-        .linkAll{
+                    &::before{
+                        content: "\201c";
+                        position: absolute;
+                        top: 8.4rem;
+                        left: -0.6rem;
+                        font-size: 22rem;
+                        line-height: 0;
+                        font-family: sans-serif;
+                        color: var(--color-grey-light-3);
+                        z-index: -99;
+                    }
+                    &_rating{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 3rem;
+        
+                        &_image{
+                            height: 4rem;
+                            width: 4rem;                   
+                            border-radius: 100px;
+                        }
+                        &_detail{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            padding-left: 1rem;
+                            span{
+                                display: block;
+                            }
+                            &_title{
+                                font-weight: 700;
+                            }
+                            margin-right: auto;
+                        }
+                        &_number{
+                            color:var(--color-primary);
+                            font-size: 2.5rem;
+                            font-weight: 600;
+                        }
+        
+                    } 
+            
+            
+        }          
+
+           
+    }
+
+    .linkAll{
             display: flex;
             align-items: center;
             justify-content: center;
-        }
     }
-
 }
+
+
