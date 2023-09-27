@@ -2,6 +2,9 @@
     max-width: 120rem;
     min-height:50rem;
     margin: 8rem auto;
+    @media only screen and (max-width: 75em){
+        margin:0;
+    }    
     background-color: var(--color-grey-light-3);
     box-shadow: var(--shadow-box );
 
@@ -12,6 +15,11 @@
     }
     .content{
         display:flex;
+
+        @media only screen and (max-width: 62.5em){
+           flex-direction: column;
+        }  
+        
         .navigation{
             background-color: var(--color-grey-dark-1);
             flex:1;        
@@ -19,8 +27,11 @@
 
         .main{
             background-color: #fff;
-            flex:4;         
-           
+            flex:4;  
+
+            @media only screen and (max-width: 62.5em){
+                flex:1;
+             } 
           
         }
 
